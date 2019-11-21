@@ -2,7 +2,7 @@
 
     //createAndAppend('script', 'simpleMDE.js');
     //createAndAppend('style', 'SNarkdown.css');
-    createAndAppend('script', 'turndown.js');
+    createAndAppend('script', 'imports/turndown.js');
     createAndAppend('script', 'SNarkdown.js');
     
     
