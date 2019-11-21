@@ -1,0 +1,26 @@
+{
+  "name": "SNarkDown",
+  "version": "1.0.1",
+  "description": "Replace all text area fields with a markdown renderer!",
+  "permissions": ["storage", "webNavigation", "activeTab", "https://*.service-now.com/*", "declarativeContent"],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [{
+    "matches": ["https://*.service-now.com/*"],
+    "all_frames": true,
+    "run_at": "document_end",
+    "css": ["SNarkdown.css"],
+    "js": ["content_injector.js"]
+  }],
+  "web_accessible_resources": [
+    "SNarkdown.js", "simpleMDE.js", "SNarkdown.css", "turndown.js"
+  ],
+  "icons": {
+    "16": "SnarkdownLogo16.png",
+    "48": "SnarkdownLogo48.png",
+    "128": "SnarkdownLogo128.png"
+  },
+  "manifest_version": 2
+}
